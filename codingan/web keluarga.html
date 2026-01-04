@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silsilah Keluarga Kami</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e74c3c;
+            --bg: #f8f9fa;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: #333; line-height: 1.6; }
+        
+        /* Header */
+        header { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            padding: 80px 20px; 
+            text-align: center; 
+        }
+
+        /* Navigasi */
+        nav { background: white; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); sticky: top; }
+        nav a { color: var(--primary); margin: 0 15px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+
+        /* Visual Silsilah (Tree) Sederhana */
+        .tree-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .level { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        
+        .member-box {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            border-left: 5px solid var(--accent);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .line { width: 2px; height: 30px; background: #ccc; }
+
+        /* Grid Foto Anggota */
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .member-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .member-card:hover { transform: translateY(-10px); }
+        .member-card img { width: 100%; height: 220px; object-fit: cover; }
+        .member-card h3 { margin: 15px 0 5px; font-size: 1.2rem; }
+        .member-card p { color: #666; font-size: 0.9rem; padding-bottom: 15px; }
+
+        footer { text-align: center; padding: 40px; background: var(--primary); color: white; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Keluarga Karyadi</h1>
+    <p>Mengabadikan setiap cerita dalam satu tempat</p>
+</header>
+
+<nav>
+    <a href="#silsilah">Silsilah</a>
+    <a href="#galeri">Anggota Keluarga</a>
+</nav>
+
+<div class="container" id="silsilah">
+    <h2 style="text-align:center;">Struktur Silsilah</h2>
+    
+    <div class="tree-container">
+        <div class="level">
+            <div class="member-box"><strong>Kakek & Nenek</strong></div>
+        </div>
+        <div class="line"></div>
+        <div class="level">
+            
+            <div class="member-box" style="border-left-color: var(--primary);"><strong>Ayah & Bunda</strong></div>
+            
+        </div>
+        <div class="line"></div>
+        <div class="level">
+            <div class="member-box">Arya</div>
+            <div class="member-box">Askar</div>
+            <div class="member-box">Abyan</div>
+        </div>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid #ddd; margin: 60px 0;">
+
+    <h2 id="galeri" style="text-align:center;">Profil Anggota</h2>
+    <div class="member-grid">
+        <div class="member-card">
+            <img src="Screenshot_20260104-231840_1.jpg" alt="Ayah">
+            <h3> Karyadi</h3>
+            <p>Sifat: Pekerja Keras & Penyayang</p>
+        </div>
+        <div class="member-card">
+            <img src="Screenshot_20260104-231136_2.jpg" alt="bunda">
+            <h3> Novieyantie Widaningsih</h3>
+            <p>Sifat: Jago Masak & Sabar</p>
+        </div>
+        <div class="member-card">
+            <img src="SnapInsta.to_408056075_713125370742559_7904603438205705510_n.jpg" alt="Saya">
+            <h3>Arya Putra Libani</h3>
+            <p>Hobi: Belajar Coding & Main game</p>
+        </div>
+        <div class="member-card">
+            <img src="Screenshot_20260104-231259_8.jpg" alt="Adik">
+            <h3>Askar Putra Haidar</h3>
+            <p>Hobi: Main & Makan</p>
+        </div>
+         <div class="member-card">
+            <img src="Screenshot_20260104-231318_9.jpg" alt="Adik">
+            <h3>Abyan Ahmad Nur Putra</h3>
+            <p>Hobi: Rewel & Nangis</p>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Website Keluarga Karyadi. Dibuat  Oleh Arya dengan 💻 di VS Code.</p>
+</footer>
+
+</body>
+</html>
